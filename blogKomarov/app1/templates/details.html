@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+<title>Странца статьи Комарова</title>
+ {% block body %}
+<style>
+        .activ{
+            background-color: #00FF33;
+            margin: 50px;
+            padding: 20px;
+        }
+</style>
+<div class="activ">
+  <h4>Статья {{posts.id }}</h4>
+  <h3>{{posts.title }}</h3>
+<p style="font-family:Verdana; font-size:18px;">
+   {{posts.content }}
+</p>
+</div>
+{% endblock %}

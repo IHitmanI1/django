@@ -1,0 +1,23 @@
+<title>Главная</title>
+<meta name="description" content="Главная страница блога"/>
+<meta name="keywords" content="блог"/>
+
+{% block body %}
+<style>
+        .activ{
+            text-align: center;
+            background-color: #FCFF33;
+            margin: 50px;
+            padding: 20px;
+            border-radius: 25px;
+        }
+</style>
+<div class="activ">
+  <h3>Главная: статьи блога Комарова</h3>
+<ul style="font-family:Verdana; font-size:18px;">
+    {% for item in posts %}
+        <li><a href="/blog/{{item.id}}">{{ item.title }}</a></li>
+    {% endfor %}
+</ul>
+</div>
+{% endblock %}
