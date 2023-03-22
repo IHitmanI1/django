@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    {% load static%}
+   <link rel="stylesheet" type="text/css" href="{% static 'main.css' %}" />
+     <title> Django Application from Komarov</title>
+</head>
+<body bgcolor="bc8f8f">
+  СмолГУ - ФИЗМАТ - Разработчик: Комаров Д.И.
+<p>
+  {% block content %}
+  {% endblock %}
+</p>
+</body>
+</html>

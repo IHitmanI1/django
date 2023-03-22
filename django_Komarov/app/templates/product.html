@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% load static %}
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+{% block content %}
+<div id="center_block">
+    <h3>Автомобили</h3>
+    <table border="2">
+     <tr>
+        <th>Артикул</th>
+        <th>Фото</th>
+        <th>Продукт магазина РОГА и КОПЫТА</th>
+        <th>Цена(руб.)</th>
+        <th>Заказ с доставкой на дом</th>
+    </tr>
+    {% for item in products %}
+         <tr>
+         <td>{{ item.id }}</td>
+         <td><img src="{% get_static_prefix %}image/{{ item.foto }}" alt="Пончик" width  = "150" height = "150" /></td>
+         <td>{{ item.name }}</td>
+         <td>{{ item.price }}</td>
+         <td>Заказать {{item.name}}</td>
+        </tr> 
+    {% endfor %}
+    </table>   
+</div>
+{% endblock %}

@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+ <meta charset="utf-8" />
+ {% load static%}
+ {% block content %}
+<h1>Отгадай загадку - получи ПРИЗ!</h1>
+{% if message %}
+    <p><strong>{{ message }}</strong></p>
+    <img src="{% static 'chocolate_cake.jpg' %}" width="200" height="200" alt="Вот тебе ПРИЗ!!!">
+{% endif %}
+{% if latest_riddles %}
+    <ul>
+        {% for riddle in latest_riddles %}
+            <li>
+                <a href="/app/{{ riddle.id }}/">
+                    {{ riddle.riddle_text }}
+                </a>
+            </li>
+        {% endfor %}
+    </ul>
+{% else %}
+    <p>No riddles are available right now.</p>
+{% endif %}
+{% endblock %}

@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>HTML5 Geolocation API Yandex</h2>
+<div id="map" style="width: 1200px; height: 500px"></div>
+<script src="http://api-maps.yandex.ru/2.0/?load=package.full&lang=ru-RU" type="text/javascript"></script>
+<script type="text/javascript">
+  var myMap;
+  ymaps.ready(init); // Ожидание загрузки API с сервера Яндекса
+  function init () {
+    myMap = new ymaps.Map("map", {
+      center: [54.78, 32.04], // Координаты центра карты -Смоленск
+      zoom: 10 // Zoom
+    });
+  }
+</script>
+{% endblock %}

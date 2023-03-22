@@ -1,0 +1,76 @@
+html, body {
+  	height:100%;
+  	color: #000; 
+  	background: #FFFFFF;
+  	word-wrap: break-word; /* Перенос строк добавляется автоматически, чтобы слово поместилось в заданную ширину блока */
+  	font-size: 12px; 
+  	font-family: Lobster, cursive; /* Шрифт от Самойловой*/
+  	margin: 0; /* Внешний отступ*/
+  	text-align: center; /*Выравнивание строчных элементов*/
+}
+#wrapper {
+  	height:auto !important;
+  	height:100%;
+  	min-height:100%;
+  	width: 1024px;
+  	margin: 0 auto;
+  	text-align: left;
+}
+#header {
+  	height:140px;
+  	background: #fff;
+  	padding-top: 10px; /* Внутренний отступ*/
+}
+.logo {
+	height: 240px;
+	width: 1000px;
+	background: url(../image/smolgu.png) no-repeat;
+	display:block;
+}
+#menu{
+	display: block;
+	float:left;
+	background:#4a90d9;	
+	height:36px;
+	width: 100%;
+	-webkit-border-top-left-radius: 6px;
+	-webkit-border-top-right-radius: 6px;
+	-moz-border-radius-topleft: 6px;
+	-moz-border-radius-topright: 6px;
+	border-top-left-radius: 6px;
+	border-top-right-radius: 6px;
+}
+#menu ul{
+	list-style:none;
+	margin-left: -40px;
+	width: 100%;
+}
+#menu li{
+	list-style:none;
+	float:left;
+	border-right:1px solid #fff;			
+}
+#menu li a{
+	color: #fff;
+	text-transform:uppercase;
+	font-size:11px;
+	font-weight:bold;
+	text-decoration:none;
+	padding:0 25px;				
+}
+#menu li a:hover{
+	color:#b2b4b5;
+}
+#container {
+	margin-top: 150px;
+  }
+#footer {
+    width: 1024px;
+    margin: 0 auto;
+    text-align: left;
+    height: 50px;
+    margin-top: -100px;
+    background: #4a90d9;
+    font-family: Lobster, cursive; /* Шрифт от Самойловой*/
+    font-size: 15px;
+} 				

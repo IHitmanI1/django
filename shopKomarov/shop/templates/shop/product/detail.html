@@ -1,0 +1,22 @@
+{% extends "shop/base.html" %}
+{% load static %}
+
+{% block title %}
+  {{ product.name }}
+{% endblock %}
+
+{% block content %}
+  <div class="product-detail">
+    <img src="{% if product.image %}{{ product.image.url }}{% else %}{% static 'img/no_image.png' %}{% endif %}">
+    <h2><a href="{{ product.category.get_absolute_url }}">{{ product.category }}</a></h2>
+    <h1>{{ product.name }}</h1>
+    <p class="price">{{ product.price }}руб.</p>
+    <form action="" method="post">
+      <!--{{ cart_product_form }} --> <!-- снять комментарий после добавления корзины cart -->
+      {% csrf_token %}
+      <input type="submit" value="Добавить в корзину">
+    </form>
+    {{ product.description|linebreaks }}
+  </div>
+{% endblock %}
+<!-- {% url "cart:cart_add" product.id %}  вставить адрес  в form после добавления корзины -->

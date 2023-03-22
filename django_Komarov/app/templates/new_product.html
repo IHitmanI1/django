@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block content %}
+<h3>Магазин Рога и КОПЫТА</h3>
+<p> Добавление сведений о новых продуктах </p>
+<form method="POST" class="post-form">{% csrf_token %}
+      {{ form.as_p }}
+      <button type="submit" class="save btn btn-default">Save</button>
+   </form>
+<p>{{message}}</p>
+{% endblock %}

@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<h2>Главная страница сайта Комарова Д.И.</h2>
+      <img src="{% static 'image/Жаба.png' %}" id="moto" style = "position:absolute; top:400px; left:300px" width  = "125" height = "100"/>
+<input type="button" value="|" onclick="car_down()">
+<input type="button" value="^" onclick="car_up()">
+<input type="button" value="<" onclick="car_left()">
+<input type="button" value=">" onclick="car_right()">
+<script type="text/javascript">
+function car_down () {x = 0;
+x = document.getElementById("moto").offsetTop;
+xn = x + 50;
+document.getElementById("moto").style.top = xn+"px"
+}
+function car_up () {
+x = 0;
+x = document.getElementById("moto").offsetTop;
+xn = x - 50;
+document.getElementById("moto").style.top = xn+"px"
+}
+function car_left () {
+x = 0;
+x = document.getElementById("moto").offsetLeft;
+xn = x - 50;
+document.getElementById("moto").style.left = xn+"px"
+}
+function car_right () {
+x = 0;
+x = document.getElementById("moto").offsetLeft;
+xn = x + 50;
+document.getElementById("moto").style.left = xn+"px"
+}
+</script>
+{% endblock %}
+

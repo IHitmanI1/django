@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Django Application from Komarov</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}" />
+    <script src="{% static 'scripts/modernizr-2.6.2.js' %}"></script>
+</head>
+<body>
+<div id="wrapper"><!--блок wrapper-->
+    <div id='header'>
+        <img src="{% static 'image/smolgu.png' %}" height="170" alt="header"/>
+
+        <div id ="menu">
+            <ul>
+                    <li><a href="{% url 'index' %}">Главная</a></li>
+                    <li><a href="{% url 'simple' %}">Мои мечты</a></li>
+                    <li><a href="{% url 'map' %}">Карта Смоленска</a></li>
+                    <li><a href="{% url 'my_form' %}">Форма</a></li>
+                    <li><a href="{% url 'product' %}">Мои продукты</a></li>
+                    <li><a href="{% url 'game' %}">Игра</a></li>
+                    <li><a href="{% url 'new_product' %}">Добавление продукта</a></li>
+            </ul>
+            <br />
+        </div>
+    </div>
+<div id='content'>
+    {% block content %}
+    <p>Контент. Здесь может быть абсолютно любая информация.</p>
+    {% endblock %}
+</div>
+</div>
+<div id="footer">
+   Разработчик: Комаров Денис - ПИвЛ19
+</div>
+</body>
+

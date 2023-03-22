@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<h2>{{title}}</h2>
+<h3>Привет из новой страницы</h3>
+<p style="font-size:30px">{{message}}Это он!!!</>
+<img src="{% static 'image/3.jpg' %}" width  = "200" height = "150"/>
+<p style="font-size:30px">Сделали на заводе Lamborghini</>
+{% endblock %}

@@ -1,0 +1,11 @@
+<{% extends "base.html" %}
+{% block content %}
+<p>Форма от Комарова</p>
+<form method="POST" class="post-form">{% csrf_token %}
+      <table>
+        {{ form }}
+         </table>
+      <button type="submit" class="save btn btn-default">Сохранить</button>
+</form>
+{{message}}
+{% endblock %}
